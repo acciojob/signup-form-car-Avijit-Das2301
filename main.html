@@ -1,43 +1,108 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <form method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Name" required>
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Email" required>
-        
-        <label>Gender</label>
-        <label><input type="radio" name="gender" id="gender_m" required>Male</label>
-        <label><input type="radio" name="gender" id="gender_f" required>Female</label>
-        
-        <label for="cars">Car Brands</label>
-        <select id="cars" required>
-            <option>--Please choose an option--</option>
-            <option>Toyota</option>
-            <option>Honda</option>
-        </select>
-        
-        <label for="age">Age</label>
-        <input type="number" id="age" placeholder="Age" required>
-        
-        <label for="dob">DOB</label>
-        <input type="date" id="dob" required>
-        
-        <label for="tel">Phone Number</label>
-        <input type="tel" id="tel" placeholder="xxx-xxx-xxxx">
-        
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Password" required>
-        
-        <label><input type="checkbox" id="tos" required>I agree to the TOS</label>
-        
-        <button type="submit">Submit</button>
-    </form>
-    <script src="./script.js"></script>
-</body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Signup Form</title>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<form method="post" id="signup-form">
+			<!-- Name  -->
+			<label for="name">Name</label>
+			<input
+				type="text"
+				id="name"
+				name="name"
+				placeholder="Name"
+				required/>
+			
+			<!-- Email  -->
+			<label for="email">Email</label>
+			<input
+				type="email"
+				id="email"
+				name="email"
+				placeholder="Email"
+				required/>
+
+			<!-- Gender  -->
+			<fieldset>
+				<legend>Gender</legend>
+				<input
+				type="radio"
+				id="gender_m"
+				name="gender"
+				value="male"
+				required />
+				<label for="gender_m">Male</label>
+
+				<input
+				type="radio"
+				id="gender_f"
+				name="gender"
+				value="female"
+				required />
+				<label for="gender_f">Female</label>
+			</fieldset>
+
+			<!-- Car Brands  -->
+			<label for="cars">Car Brands</label>
+			<select id="cars" name="cars" required>
+				<option value="" disabled selected>--Please choose an option--</option>
+				<option value="tesla">Tesla</option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+				<option value="maruti">Maruti</option>
+			</select>
+
+			<!-- Age  -->
+			<label for="age">Age</label>
+			<input
+				type="number"
+				id="age"
+				name="age"
+				placeholder="Age"
+				required/>
+
+			<!-- DOB  -->
+			<label for="dob">DOB</label>
+			<input
+				type="date"
+				id="dob"
+				name="dob"
+				required/>
+
+			<!-- Phone Number  -->
+			<label for="tel">Phone Number</label>
+			<input
+				type="tel"
+				id="tel"
+				name="tel"
+				placeholder="xxx-xxx-xxx" />
+
+			<!-- Password  -->
+			<label for="password">Password</label>
+			<input
+				type="password"
+				id="password"
+				name="password"
+				placeholder="Password"
+				required/>
+
+			<!-- TOS  -->
+			<div class="tos-row">
+				<input
+					type="checkbox"
+					id="tos"
+					name="tos"
+					required/>	
+				<label for="tos">I agree to the TOS</label>
+			</div>
+
+			<!-- Submit  -->
+			<button type="submit">Submit</button>
+		</form>
+
+		<script src="script.js"></script>
+	</body>
 </html>
